@@ -14,7 +14,7 @@ helm list
 ```
 helm upgrade nginx-release ./nginx-chart
 ```
-# uninnstall
+# uninstall
 ```
 helm uninstall nginx-release
 ```
@@ -22,4 +22,8 @@ helm uninstall nginx-release
 # for override value
 ```
 helm install nginx-release ./nginx-chart -f my-values.yaml
+```
+
+```
+helm install nginx-release ./nginx-chart --set nginx.replicas.canary=2
 ```
