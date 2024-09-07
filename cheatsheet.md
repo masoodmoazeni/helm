@@ -2,4 +2,5 @@
 
 | command  | description |
 | ------------- |:-------------:|
-| ``` helm create <name>    ```   | Creates a chart directory along .     |
+|
+``` helm create <name> ```   | Creates a chart directory along .     |
