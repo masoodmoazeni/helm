@@ -1,0 +1,17 @@
+nginx:
+  image: "nginx:latest"
+  replicas:
+    canary: 1
+    stable: 3
+
+  configMaps:
+    canary: nginx-config-canary
+    stable: nginx-config-stable
+
+  service:
+    name: nginx-service
+    port: 80
+    targetPort: 80
+
+  ingress:
+    host: nginx.example.com
