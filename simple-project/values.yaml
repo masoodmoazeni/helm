@@ -1,0 +1,28 @@
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: "latest"
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 100Mi
+  limits:
+    cpu: 100m
+    memory: 100Mi
+
+configmap:
+  title: "Hello, Nginx"
+  body: "Hello, Masood Moazeni"
+
+ingress:
+  host: moazeni.local
+
+hpa:
+  minReplicas: 1
+  maxReplicas: 5
+  cpuTarget: 75
+
+secret:
+  packopsName: UEFDS09QUwo=
